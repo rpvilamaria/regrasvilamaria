@@ -194,7 +194,7 @@ var S = [
     ["3.9", "Após desmaiar um player, saia do local sem proferir qualquer palavra a ele."],
     ["3.10", "Uso de armas em veículos: na moto (piloto ou garupa) só é autorizado o uso de pistola. É proibido atirar de dentro de carro blindado: para atirar, é preciso sair do veículo."],
     ["3.11", "É proibido aplicar qualquer roleplay de golpe dentro da cidade."],
-    ["3.12", "É proibido roubar ou furtar veículos de serviço público (Polícia, Médico/Hospital/SAMU, Mecânica) e assaltar veículos oficiais de trabalhadores de empregos legais."],
+    ["3.12", "É proibido roubar ou furtar veículos de serviço público (Médico/Hospital/SAMU, Mecânica) e assaltar veículos oficiais de trabalhadores de empregos legais. O roubo de viatura é permitido, mas libera o disparo letal por parte da polícia (regra 11.7)."],
     ["3.13", "É proibido qualquer tipo de corrupção em empregos legais (Polícia, Bombeiros, Médicos, Mecânicos, Judiciário), como desvio de armamento, munição ou qualquer material pertencente aos órgãos públicos."],
     ["3.14", "Quem está em emprego legal não pode praticar atividade ilegal (venda de drogas, roubos, furtos). Exceção: mecânicos."],
     ["3.15", "É proibido o uso de roupas combinadas que simulem uma família, por exemplo todos os membros de uma facção vestindo rosa. A mesma regra vale para mochilas de pais (mochila combinada que simule vínculo familiar) e para a pintura de veículos (frota ou carros pintados de forma combinada para simular uma família)."]
@@ -328,6 +328,9 @@ var S = [
     { h: "Cobranças", items: [
       ["10.23", "O RP de cobrança exige motivo ou contexto, podendo ser moderadamente agressivo."],
       ["10.24", "Mostrar o dedo ou xingar não são motivos para matar: situações similares são RDM."]
+    ]},
+    { h: "Equivalência de armamento", items: [
+      ["10.25", "O armamento permitido em qualquer ação é sempre equivalente para as duas partes, em todos os armamentos e em todas as ações. O que é liberado ou proibido para os assaltantes vale de forma equivalente para a polícia. Exemplos: se os assaltantes só podem usar arma branca, a polícia só pode usar o cacetete; se a ação é de pistola, ambos usam pistola; se a ação é de fuzil, ambos podem usar fuzil."]
     ]}
   ]
 },
@@ -342,7 +345,7 @@ var S = [
       ["11.4", "Necessários **2 PMs em PTR** para furtos."],
       ["11.5", "Em safe zones, só com lockpick e se ninguém estiver vigiando o veículo. Proibido furtar no Hospital."],
       ["11.6", "Se for abordado durante o furto, é obrigatório cancelar a ação e seguir o RP."],
-      ["11.7", "Proibido roubar ou furtar viaturas e veículos de serviço (SAMU)."]
+      ["11.7", "O roubo de viatura é permitido, mas libera o disparo letal por parte da polícia. É proibido furtar viaturas e roubar ou furtar veículos de serviço do SAMU."]
     ]}
   ]
 },
@@ -382,7 +385,7 @@ var S = [
       ["13.8", "É extremamente proibido levar a polícia para dentro da área vermelha para matar ou saquear, e policiais não podem ser carregados para lá."]
     ]},
     { h: "Resgate a prisioneiros", items: [
-      ["13.9", "Polícia sem limites de efetivo; armamento livre."],
+      ["13.9", "O resgate durante uma ação respeita o armamento daquela ação: onde o armamento é proibido (caixa eletrônico, caixa registradora e carga de caminhão), o resgate é permitido, mas sem armas; nas demais ações, vale o armamento permitido nela. Fora de ações, o resgate armado só é permitido durante a transferência policial para o presídio."],
       ["13.10", "Bandidos podem interceptar a polícia em qualquer local, menos dentro da delegacia e imediações, e não podem ficar dentro do presídio."]
     ]},
     { h: "Corridas ilegais", items: [
@@ -438,6 +441,31 @@ var S = [
     ["16.2", "Todo chamado deve conter descrição da situação e/ou do problema."],
     ["16.3", "Chamados do tipo “Me ajude”, “Socorro”, “Vem cá lindo” ou “Preciso conversar com você ADM, quando der vem aqui” serão ignorados."]
   ]}]
+},
+{ id: 17, title: "Roubos Marcados",
+  intro: "Esta seção vale para os roubos do servidor: lojas, caixas eletrônicos, caixas registradoras, casas, joalheria, bancos, carro-forte, comboio Gruppe6, carga de caminhão (eletrônicos e hospitalar), roubo de carro e trem. Além dela, valem as regras de ações (seção 10), assalto e furto (seção 11) e perseguição (seção 13).",
+  groups: [
+    { h: "Regras gerais", items: [
+      ["17.1", "Nenhum roubo pode ser iniciado dentro de safe zones (seção 7)."],
+      ["17.2", "Não são permitidas alianças em roubos. Valem as regras 3.5 e 10.1."],
+      ["17.3", "Nas ações blipadas (Banco Central, Fleeca, lojinha, Ammu-Nation, roubos de caminhão e similares), quando o tempo do roubo termina, os assaltantes podem fugir sem esperar a polícia e a ação passa a ser ação de rua (regra 10.18). Durante a ação, todas as regras da ação se mantêm."]
+    ]},
+    { h: "Lojas, joalheria e bancos", items: [
+      ["17.4", "Roubos a lojas, joalheria e bancos são ações marcadas. Podem ocorrer em qualquer horário e permitem reféns e negociação, conforme as seções 10 e 12. O armamento é definido na negociação (regra 10.5)."]
+    ]},
+    { h: "Ações de rua", items: [
+      ["17.5", "Roubo a caixas eletrônicos e a caixas registradoras é ação de rua: é proibido usar armas e a fuga é prioritária (regra 10.13). O policial que chegar durante o roubo segue a regra 13.19."],
+      ["17.6", "Casas só podem ser roubadas pelo script. É proibido roubar casa de jogador. O roubo a casas é ação de rua."]
+    ]},
+    { h: "Cargas e veículos", items: [
+      ["17.7", "O roubo de carga de caminhão (eletrônicos e hospitalar) segue a regra 10.13: sem armas e com fuga prioritária."],
+      ["17.8", "Carro-forte, comboio Gruppe6 e trem são roubos em movimento e seguem as regras de ação de rua e de perseguição (seção 13). No carro-forte e no comboio Gruppe6 é permitido o uso de fuzil. No trem, é permitido apenas o uso de pistola."],
+      ["17.9", "No roubo de carro valem as regras 11.4 e 11.7: são necessários 2 PMs em PTR. O roubo de viatura é permitido e libera o disparo letal por parte da polícia; é proibido roubar veículos de serviço do SAMU."]
+    ]},
+    { h: "Roubo a players", items: [
+      ["17.10", "As zonas de assalto liberado são os bairros pré-marcados da regra 11.1. O jogador recebe um aviso ao entrar nelas. Roubo a players só pode ocorrer dentro dessas zonas."]
+    ]}
+  ]
 }
 ];
 
